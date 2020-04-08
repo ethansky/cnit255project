@@ -7,7 +7,7 @@
 - Must have GUI
 
 # Ideas
-## - Classes
+- ## Classes
 	- Board Class (GUI)
 	- Game Logic Interface
 	- Tile Class (Inheritance)
