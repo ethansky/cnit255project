@@ -1,4 +1,4 @@
 
-public class Sales {
+public class Sales extends Employee{
 
 }
