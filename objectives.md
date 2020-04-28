@@ -44,9 +44,29 @@
 		- uID Attribute
 		- First Name Attribute
 		- Last Name Attribute 
+		- Search Button
 	- Create Report GUI
 		- uID Attribute
 		- First Name Attribute
 		- Last Name Attribute
 		- Report Textbox 
+		- Create Report Button
+ 
+ - ## Buttons
+	- Login Button
+		- Logic: On button click, search array for inputted uID 
+		and Password. If true, login to UI specific to job title
+	- Register Button
+		- Logic: On button click, add new entries into the different
+		Employee attribute arrays for the inputted values
+	- Delete Button
+		- Logic: On button click, delete selected profile data that 
+		matches the inputted uID, First Name, and Last Name
+	- Search Button
+		- Logic: On button click, search through uID, First Name, 
+		and Last Name arrays that match the inputted data & display
+		all Employee attributes 
+	- Create Report Button
+		- Logic: On button click, create a .txt file and save it 
+		locally to a user specified file location
 	
