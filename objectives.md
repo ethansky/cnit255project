@@ -8,18 +8,6 @@
 
 # Employee Management Software
 - ## Classes
-	- Manager Class
-		- Login Interface
-		- Register/Delete Employee Interface
-		- Search Employee Interface
-		- Create Report Interface
-	- HR Class
-		- Login Interface 
-		- Search Employee Interface
-		- Create Report Interface 
-	- Sales Class 
-		- Login Interface
-		- Create Report Interface
 	- Employee Class
 		- First Name Attribute
 		- Last Name Attribute
@@ -28,7 +16,18 @@
 		- Address Attribute
 		- Phone # Attribute 
 		- Salary Attribute
-		- Job Spec Attribute 
+			- Manager Class
+				- Login Interface
+				- Register/Delete Employee Interface
+				- Search Employee Interface
+				- Create Report Interface
+			- HR Class
+				- Login Interface 
+				- Search Employee Interface
+				- Create Report Interface 
+			- Sales Class 
+				- Login Interface
+				- Create Report Interface
  
 - ## GUI
 	- Login GUI
