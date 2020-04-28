@@ -6,7 +6,7 @@
 - Min 1 interface
 - Must have GUI
 
-# Ideas
+# Employee Management Software
 - ## Classes
 	- Board Class (GUI)
 	- Game Logic Interface
