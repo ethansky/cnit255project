@@ -40,5 +40,29 @@ public class Address {
         return zipCode;
     }
 
+	public void setHomeNumber(int homeNumber) {
+		this.homeNumber = homeNumber;
+	}
+
+	public void setStreet(String street) {
+		this.street = street;
+	}
+
+	public void setCity(String city) {
+		this.city = city;
+	}
+
+	public void setState(String state) {
+		this.state = state;
+	}
+
+	public void setCountry(String country) {
+		this.country = country;
+	}
+
+	public void setZipCode(int zipCode) {
+		this.zipCode = zipCode;
+	}
+
     
 }
