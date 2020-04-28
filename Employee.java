@@ -1,30 +1,31 @@
 
-public class Employee {
-    private static int employeeUID = 0;
+public class Employee extends Person {
+    private static int currUID = 0;
+    private int employeeUID;
     private double salary;
     private Address address;
-    private String firstName;
-    private String lastName;
-    private String password; //YES I KNOW THIS SHOULDN'T BE IN PLAINTEXT BUT CRYPTO IN JAVA IS ANNOYING AND I'M CURRENTLY ON A MONSTER FUELED CODING RAMPAGE LEAVE ME ALONE DAD
-    private String phoneNumber;
+    private String password; // YES I KNOW THIS SHOULDN'T BE IN PLAINTEXT BUT CRYPTO IN JAVA IS ANNOYING AND
+                             // I'M CURRENTLY ON A MONSTER FUELED CODING RAMPAGE LEAVE ME ALONE DAD
+    private String workPhoneNumber;
 
-    public Employee(double salary, int homeNumber, String street, String city, String state, String country, int zipCode, String firstName, String lastName, String password,
-            String phoneNumber) {
+    public Employee(double salary, int homeNumber, String street, String city, String state, String country,
+            int zipCode, String firstName, String lastName, int birthYear, int birthMonth, int birthDay, int ssn,
+            String password, String phoneNumber, String workPhoneNumber) {
+        super(firstName, lastName, birthYear, birthMonth, birthDay, ssn, phoneNumber);
+        this.address = new Address(homeNumber, street, city, state, country, zipCode);
         this.employeeUID = getUID();
         this.salary = salary;
-        this.address = new Address(homeNumber, street, city, state, country, zipCode);
-        this.firstName = firstName;
-        this.lastName = lastName;
         this.password = password;
-        this.phoneNumber = phoneNumber;
+        this.workPhoneNumber = workPhoneNumber;
     }
-    private int getUID(){
-        int fubar = employeeUID;
-        employeeUID++;
+
+    private int getUID() {
+        int fubar = currUID;
+        currUID++;
         return fubar;
     }
 
-    public Address getAddress(){
+    public Address getAddress() {
         return address;
     }
 
@@ -34,33 +35,9 @@ public class Employee {
 
     public void setSalary(double salary) {
         this.salary = salary;
-    }  
-
-    public String getFirstName() {
-        return firstName;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public String getPhoneNumber() {
-        return phoneNumber;
-    }
-
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
-
-    public String getPassword(){
+    public String getPassword() {
         return password;
     }
 
