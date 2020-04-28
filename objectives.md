@@ -8,10 +8,46 @@
 
 # Employee Management Software
 - ## Classes
-	- Board Class (GUI)
-	- Game Logic Interface
-	- Tile Class (Inheritance)
-		- X Tile Class
-		- O Tile Class
-	- Leaderboard Class
+	- Manager Class
+		- Login Interface
+		- Register/Delete Employee Interface
+		- Search Employee Interface
+		- Create Report Interface
+	- HR Class
+		- Login Interface 
+		- Search Employee Interface
+		- Create Report Interface 
+	- Sales Class 
+		- Login Interface
+		- Create Report Interface
+	- Employee Class
+		- First Name Attribute
+		- Last Name Attribute
+		- uID Attribute
+		- Password Attribute
+		- Address Attribute
+		- Phone # Attribute 
+		- Salary Attribute
+		- Job Spec Attribute 
+ 
+- ## GUI
+	- Login GUI
+		- uID Attribute
+		- Password Attribute 
+		- Login Button
+	- Register/Delete Employee GUI
+		- uID Attribute
+		- First Name Attribute 
+		- Last Name Attribute
+		- Register Button 
+		- Delete Button
+	- Search Employee GUI
+		- uID Attribute
+		- First Name Attribute
+		- Last Name Attribute 
+	- Create Report GUI
+		- uID Attribute
+		- First Name Attribute
+		- Last Name Attribute
+		- Report Textbox 
 	
