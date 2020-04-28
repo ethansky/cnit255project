@@ -8,25 +8,25 @@ public class Employee extends Person {
                              // I'M CURRENTLY ON A MONSTER FUELED CODING RAMPAGE LEAVE ME ALONE DAD
     private String workPhoneNumber;
 
-    public Employee(double salary, int homeNumber, String street, String city, String state, String country,
-            int zipCode, String firstName, String lastName, int birthYear, int birthMonth, int birthDay, int ssn,
-            String password, String phoneNumber, String workPhoneNumber) {
-        super(firstName, lastName, birthYear, birthMonth, birthDay, ssn, phoneNumber);
-        this.address = new Address(homeNumber, street, city, state, country, zipCode);
-        this.employeeUID = getUID();
-        this.salary = salary;
-        this.password = password;
-        this.workPhoneNumber = workPhoneNumber;
-    }
-
-    private int getUID() {
+    private static int getUID() {
         int fubar = currUID;
         currUID++;
         return fubar;
     }
 
-    public Address getAddress() {
-        return address;
+    public Employee(String firstName, String middleName, String lastName, String gender, int dateOfBirth, int SSN,
+            String phoneNumber, int employeeUID, double salary, Address address, String password,
+            String workPhoneNumber) {
+        super(firstName, middleName, lastName, gender, dateOfBirth, SSN, phoneNumber);
+        this.employeeUID = getUID();
+        this.salary = salary;
+        this.address = address;
+        this.password = password;
+        this.workPhoneNumber = workPhoneNumber;
+    }
+
+    public int getEmployeeUID() {
+        return employeeUID;
     }
 
     public double getSalary() {
@@ -37,6 +37,14 @@ public class Employee extends Person {
         this.salary = salary;
     }
 
+    public Address getAddress() {
+        return address;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
+    }
+
     public String getPassword() {
         return password;
     }
@@ -45,4 +53,11 @@ public class Employee extends Person {
         this.password = password;
     }
 
+    public String getWorkPhoneNumber() {
+        return workPhoneNumber;
+    }
+
+    public void setWorkPhoneNumber(String workPhoneNumber) {
+        this.workPhoneNumber = workPhoneNumber;
+    }
 }

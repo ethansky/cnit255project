@@ -1,21 +1,21 @@
 
 public class Person {
     private String firstName;
+    private String middleName;
     private String lastName;
-    private int birthYear;
-    private int birthMonth;
-    private int birthDay;
+    private String gender;
+    private int dateOfBirth; // XXYYZZZZ
     private int SSN;
     private String phoneNumber;
 
-    public Person(String firstName, String lastName, int birthYear, int birthMonth, int birthDay, int ssn,
+    public Person(String firstName, String middleName, String lastName, String gender, int dateOfBirth, int SSN,
             String phoneNumber) {
         this.firstName = firstName;
+        this.middleName = middleName;
         this.lastName = lastName;
-        this.birthYear = birthYear;
-        this.birthMonth = birthMonth;
-        this.birthDay = birthDay;
-        this.SSN = ssn;
+        this.gender = gender;
+        this.dateOfBirth = dateOfBirth;
+        this.SSN = SSN;
         this.phoneNumber = phoneNumber;
     }
 
@@ -27,6 +27,14 @@ public class Person {
         this.firstName = firstName;
     }
 
+    public String getMiddleName() {
+        return middleName;
+    }
+
+    public void setMiddleName(String middleName) {
+        this.middleName = middleName;
+    }
+
     public String getLastName() {
         return lastName;
     }
@@ -35,40 +43,28 @@ public class Person {
         this.lastName = lastName;
     }
 
-    public int getBirthYear() {
-        return birthYear;
+    public String getGender() {
+        return gender;
     }
 
-    public void setBirthYear(int birthYear) {
-        this.birthYear = birthYear;
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 
-    public int getBirthMonth() {
-        return birthMonth;
+    public int getDateOfBirth() {
+        return dateOfBirth;
     }
 
-    public void setBirthMonth(int birthMonth) {
-        this.birthMonth = birthMonth;
-    }
-
-    public int getBirthDay() {
-        return birthDay;
-    }
-
-    public void setBirthDay(int birthDay) {
-        this.birthDay = birthDay;
+    public void setDateOfBirth(int dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
     }
 
     public int getSSN() {
         return SSN;
     }
 
-    public void setSSN(int SSN) {
-        this.SSN = SSN;
-    }
-
-    public String getFormattedBirthday() {
-        return String.format("%d-%d-%d", getBirthMonth(), getBirthDay(), getBirthYear());
+    public void setSSN(int sSN) {
+        SSN = sSN;
     }
 
     public String getPhoneNumber() {
@@ -78,4 +74,5 @@ public class Person {
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
+
 }
