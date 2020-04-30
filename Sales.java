@@ -19,17 +19,17 @@ public class Sales extends Employee {
         this.salesDepartment = salesDepartment;
     }
 
+    public void addSale(double price) {
+        this.numberOfSales++;
+        this.totalCommission += price * (commissionPercent / 100.0);
+    }
+
     public int getStoreNumber() {
         return storeNumber;
     }
 
     public int getNumberOfSales() {
         return numberOfSales;
-    }
-
-    public void addSale(double price) {
-        this.numberOfSales++;
-        this.totalCommission += price * (commissionPercent / 100.0);
     }
 
     public int getCommissionPercent() {
