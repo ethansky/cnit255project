@@ -9,7 +9,7 @@ public class Person {
     private String phoneNumber;
 
     public Person(String firstName, String middleName, String lastName, String gender, int dateOfBirth, int SSN,
-            String phoneNumber) {
+                  String phoneNumber) {
         this.firstName = firstName;
         this.middleName = middleName;
         this.lastName = lastName;
@@ -23,52 +23,52 @@ public class Person {
         return firstName;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
     public String getMiddleName() {
         return middleName;
-    }
-
-    public void setMiddleName(String middleName) {
-        this.middleName = middleName;
     }
 
     public String getLastName() {
         return lastName;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
     public String getGender() {
         return gender;
-    }
-
-    public void setGender(String gender) {
-        this.gender = gender;
     }
 
     public int getDateOfBirth() {
         return dateOfBirth;
     }
 
-    public void setDateOfBirth(int dateOfBirth) {
-        this.dateOfBirth = dateOfBirth;
-    }
-
     public int getSSN() {
         return SSN;
     }
 
-    public void setSSN(int SSN) {
-        this.SSN = SSN;
-    }
-
     public String getPhoneNumber() {
         return phoneNumber;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public void setMiddleName(String middleName) {
+        this.middleName = middleName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public void setDateOfBirth(int dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
+    }
+
+    public void setSSN(int SSN) {
+        this.SSN = SSN;
     }
 
     public void setPhoneNumber(String phoneNumber) {
