@@ -29,7 +29,7 @@ public class Sales extends Employee {
 
     public void addSale(double price) {
         this.numberOfSales++;
-        this.totalCommission += price * (commissionPercent / 100);
+        this.totalCommission += price * (commissionPercent / 100.0);
     }
 
     public int getCommissionPercent() {
