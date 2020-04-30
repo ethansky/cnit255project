@@ -7,9 +7,9 @@ public class Sales extends Employee {
     private String salesDepartment;
 
     public Sales(String firstName, String middleName, String lastName, String gender, int dateOfBirth, int SSN,
-            String phoneNumber, int employeeUID, double salary, Address address, String password,
-            String workPhoneNumber, int storeNumber, int numberOfSales, int commissionPercent, double totalCommission,
-            String salesDepartment) {
+                 String phoneNumber, int employeeUID, double salary, Address address, String password,
+                 String workPhoneNumber, int storeNumber, int numberOfSales, int commissionPercent, double totalCommission,
+                 String salesDepartment) {
         super(firstName, middleName, lastName, gender, dateOfBirth, SSN, phoneNumber, employeeUID, salary, address,
                 password, workPhoneNumber);
         this.storeNumber = storeNumber;
@@ -21,10 +21,6 @@ public class Sales extends Employee {
 
     public int getStoreNumber() {
         return storeNumber;
-    }
-
-    public void setStoreNumber(int storeNumber) {
-        this.storeNumber = storeNumber;
     }
 
     public int getNumberOfSales() {
@@ -40,25 +36,29 @@ public class Sales extends Employee {
         return commissionPercent;
     }
 
-    public void setCommissionPercent(int commissionPercent) {
-        this.commissionPercent = commissionPercent;
-    }
-
     public double getTotalCommission() {
         return totalCommission;
+    }
+
+    @Override
+    public double getSalary() {
+        return super.getSalary() + getTotalCommission();
     }
 
     public String getSalesDepartment() {
         return salesDepartment;
     }
 
-    public void setSalesDepartment(String salesDepartment) {
-        this.salesDepartment = salesDepartment;
+    public void setStoreNumber(int storeNumber) {
+        this.storeNumber = storeNumber;
     }
 
-    @Override
-    public double getSalary() {
-        return super.getSalary() + getTotalCommission();
+    public void setCommissionPercent(int commissionPercent) {
+        this.commissionPercent = commissionPercent;
+    }
+
+    public void setSalesDepartment(String salesDepartment) {
+        this.salesDepartment = salesDepartment;
     }
 
 }
