@@ -63,8 +63,8 @@ public class Person {
         return SSN;
     }
 
-    public void setSSN(int sSN) {
-        SSN = sSN;
+    public void setSSN(int SSN) {
+        this.SSN = SSN;
     }
 
     public String getPhoneNumber() {
