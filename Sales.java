@@ -56,4 +56,9 @@ public class Sales extends Employee {
         this.salesDepartment = salesDepartment;
     }
 
+    @Override
+    public double getSalary() {
+        return super.getSalary() + getTotalCommission();
+    }
+
 }
