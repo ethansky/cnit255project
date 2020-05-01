@@ -45,8 +45,6 @@ public class LoginForm extends javax.swing.JFrame {
             }
         });
 
-        passwordTextbox.setText("passwordTextbox");
-
         jLabel2.setText("Username:");
 
         jLabel3.setText("Password:");
@@ -60,8 +58,7 @@ public class LoginForm extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(94, 94, 94)
-                        .addComponent(loginButton)
-                        .addGap(30, 30, 30))
+                        .addComponent(loginButton))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel3)
