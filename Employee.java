@@ -1,13 +1,13 @@
 
 public class Employee extends Person {
     private static int currUID = 0;
-    private int employeeUID;
+    private final int employeeUID;
     private double salary;
     private String address;
     private String password; // YES I KNOW THIS SHOULDN'T BE IN PLAINTEXT BUT CRYPTO IN JAVA IS ANNOYING AND
     // I'M CURRENTLY ON A MONSTER FUELED CODING RAMPAGE LEAVE ME ALONE DAD
 
-    public Employee(String firstName, String lastName, String phoneNumber, int uID, double salary, String address, String password) {
+    public Employee(String firstName, String lastName, String phoneNumber, double salary, String address, String password) {
         super(firstName, lastName, phoneNumber);
         this.employeeUID = getUID();
         this.salary = salary;
