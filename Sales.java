@@ -6,7 +6,7 @@ public class Sales extends Employee {
     private double totalCommission;
     private String salesDepartment;
 
-    public Sales(String firstName, String lastName, String phoneNumber, int uID, double salary, Address address, String password, int storeNumber, int numberOfSales, int commissionPercent, double totalCommission, String salesDepartment) {
+    public Sales(String firstName, String lastName, String phoneNumber, int uID, double salary, String address, String password, int storeNumber, int numberOfSales, int commissionPercent, double totalCommission, String salesDepartment) {
         super(firstName, lastName, phoneNumber, uID, salary, address, password);
         this.storeNumber = storeNumber;
         this.numberOfSales = numberOfSales;
