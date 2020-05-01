@@ -240,7 +240,9 @@ public class RegisterDeleteForm extends javax.swing.JFrame {
     }//GEN-LAST:event_deleteButtonActionPerformed
 
     private void backButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonActionPerformed
-        // TODO add your handling code here:
+        this.setVisible(false);
+        MenuForm frame = new MenuForm();
+        frame.setVisible(true);
     }//GEN-LAST:event_backButtonActionPerformed
 
     /**

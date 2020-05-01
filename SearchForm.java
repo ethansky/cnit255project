@@ -124,7 +124,9 @@ public class SearchForm extends javax.swing.JFrame {
     }//GEN-LAST:event_searchButtonActionPerformed
 
     private void backButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonActionPerformed
-        // TODO add your handling code here:
+        this.setVisible(false);
+        MenuForm frame = new MenuForm();
+        frame.setVisible(true);
     }//GEN-LAST:event_backButtonActionPerformed
 
     /**

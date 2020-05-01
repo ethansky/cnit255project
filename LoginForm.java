@@ -93,21 +93,20 @@ public class LoginForm extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
- 
-
     private String[][] loginDatabase ={
         // {"C001", "E002","J003","K004","J005"},
         // {"Chutchcraft","E","JKlezinsky","KLee","JPeterson"}
-        {"C001", "Chutchcraft"},{"E002", "EEvans"},{"J003", "JKlezynski"},{"J004, JLee"},{"J005", "JPetersen"}
+        {"C001", "Chutchcraft"},{"E002", "EEvans"},{"J003", "JKlezynski"},{"J004", "JLee"},{"J005", "JPetersen"}
     };
 
     private void loginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginButtonActionPerformed
-        this.setVisible(false);
+        
         String employeeUID = usernameTextbox.getText(); 
         String password = new String(passwordTextbox.getPassword());
         
         for (String[] strings : loginDatabase) {
             if (employeeUID.equals(strings[0]) && password.equals(strings[1])){
+            this.setVisible(false);
             MenuForm frame = new MenuForm();
             frame.setVisible(true);
             
@@ -115,7 +114,9 @@ public class LoginForm extends javax.swing.JFrame {
             
         }
 
-    }//GEN-LAST:event_loginButtonActionPerformed
+    }
+
+
 
     /**
      * @param args the command line arguments
