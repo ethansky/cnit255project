@@ -129,19 +129,25 @@ public class MenuForm extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void registerButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerButtonActionPerformed
-        // TODO add your handling code here:
+        this.setVisible(false);
+        RegisterDeleteForm frame = new RegisterDeleteForm();
+        frame.setVisible(true);
     }//GEN-LAST:event_registerButtonActionPerformed
 
     private void searchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchButtonActionPerformed
-        // TODO add your handling code here:
+        this.setVisible(false);
+        SearchForm frame = new SearchForm();
+        frame.setVisible(true);
     }//GEN-LAST:event_searchButtonActionPerformed
 
     private void createFormButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createFormButtonActionPerformed
-        // TODO add your handling code here:
+        this.setVisible(false);
+        CreateReportForm frame = new CreateReportForm();
+        frame.setVisible(true);
     }//GEN-LAST:event_createFormButtonActionPerformed
 
     private void exitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitButtonActionPerformed
-        // TODO add your handling code here:
+        this.setVisible(false);
     }//GEN-LAST:event_exitButtonActionPerformed
 
     /**
