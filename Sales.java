@@ -6,12 +6,8 @@ public class Sales extends Employee {
     private double totalCommission;
     private String salesDepartment;
 
-    public Sales(String firstName, String middleName, String lastName, String gender, int dateOfBirth, int SSN,
-                 String phoneNumber, int employeeUID, double salary, Address address, String password,
-                 String workPhoneNumber, int storeNumber, int numberOfSales, int commissionPercent, double totalCommission,
-                 String salesDepartment) {
-        super(firstName, middleName, lastName, gender, dateOfBirth, SSN, phoneNumber, employeeUID, salary, address,
-                password, workPhoneNumber);
+    public Sales(String firstName, String lastName, String phoneNumber, int uID, double salary, Address address, String password, int storeNumber, int numberOfSales, int commissionPercent, double totalCommission, String salesDepartment) {
+        super(firstName, lastName, phoneNumber, uID, salary, address, password);
         this.storeNumber = storeNumber;
         this.numberOfSales = numberOfSales;
         this.commissionPercent = commissionPercent;
