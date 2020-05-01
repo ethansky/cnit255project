@@ -42,9 +42,9 @@ public class Credentials {
         return -1;
     }
     
-    public void addEmployee(String firstName, String lastName, int employeeUID, String phoneNumber, double salary, String address, String password) {
+    public void addEmployee(String firstName, String lastName, String phoneNumber, int employeeUID, String address, String password) {
 
-        employeeData.add(new Employee(firstName, lastName, employeeUID, phoneNumber, salary, address, password));
+        employeeData.add(new Employee(firstName, lastName, phoneNumber, employeeUID, address, password));
     }
     
     public void deleteUser(String firstName, String lastName, int employeeUID){ 

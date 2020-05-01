@@ -109,7 +109,7 @@ public class LoginForm extends javax.swing.JFrame {
                     frame.setVisible(true); //successful login
                 
             }  
-              return;
+              
           }
     }//GEN-LAST:event_loginButtonActionPerformed
 
