@@ -96,8 +96,24 @@ public class LoginForm extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private String employeeUID; 
+    private String password; 
+
+    private String[][] loginDatabase ={
+        {"C001", "E002","J003","K004","J005"},
+        {"Chutchcraft","E","JKlezinsky","KLee","JPeterson"}
+    };
+
     private void loginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginButtonActionPerformed
-        // TODO add your handling code here:
+     
+            for (int i = 0; i < loginDatabase[i].length; i++){
+                if (employeeUID.equals(loginDatabase[i][0])){
+                    MenuChoiceForm frame = new MenuChoiceForm();
+                    frame.setVisible(true); //successful login
+                
+            }  
+              return;
+          }
     }//GEN-LAST:event_loginButtonActionPerformed
 
     /**
