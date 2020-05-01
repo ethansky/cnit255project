@@ -108,7 +108,7 @@ public class LoginForm extends javax.swing.JFrame {
         
         for (String[] strings : loginDatabase) {
             if (employeeUID.equals(strings[0]) && password.equals(strings[1])){
-            MenuChoiceForm frame = new MenuChoiceForm();
+            MenuForm frame = new MenuForm();
             frame.setVisible(true);
             
             }
