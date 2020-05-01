@@ -1,5 +1,5 @@
 
-public class Manager extends Employee implements Payable {
+public class Manager extends Employee implements Salaried {
     private int storeNumber;
     private double bonus;
     private double salary;

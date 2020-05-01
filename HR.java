@@ -1,5 +1,5 @@
 
-public class HR extends Employee implements Payable{
+public class HR extends Employee implements Salaried {
     private int cubicle;
     private double salary;
 

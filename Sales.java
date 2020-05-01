@@ -1,5 +1,5 @@
 
-public class Sales extends Employee implements Payable {
+public class Sales extends Employee implements Salaried {
     private int storeNumber;
     private double salary;
     private int numberOfSales;
