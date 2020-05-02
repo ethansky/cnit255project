@@ -134,11 +134,16 @@ public class SearchForm extends javax.swing.JFrame {
             }
             i++;
         }
-        if (i == employeeData.size() - 1){
+        if (i >= employeeData.size()){
             i = -1; 
         }
 
-        SearchResultsForm foobar = new SearchResultsForm();
+        if (i != -1)
+        {
+        SearchResultsForm foobar = new SearchResultsForm(employeeData.get(i));
+        foobar.setVisible(true);
+        foobar.setDefaultCloseOperation(javax.swing.JFrame.DISPOSE_ON_CLOSE);
+        }
     }//GEN-LAST:event_searchButtonActionPerformed
 
     private void backButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonActionPerformed

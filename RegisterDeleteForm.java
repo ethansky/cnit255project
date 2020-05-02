@@ -269,7 +269,15 @@ public class RegisterDeleteForm extends javax.swing.JFrame {
     }// GEN-LAST:event_registerButtonActionPerformed
 
     private void deleteButtonActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_deleteButtonActionPerformed
-        // TODO add your handling code here:
+        for (int i = 0; i < employeeData.size(); i++){
+            String firstName = firstNameDelTextbox.getText();
+            String lastName = lastNameDelTextbox.getText();
+            int employeeUID = Integer.valueOf(uIDDelTextbox.getText());
+            if (firstName.equals(employeeData.get(i).getFirstName()) && lastName.equals(employeeData.get(i).getLastName()) && (employeeUID == employeeData.get(i).getEmployeeUID())){
+                employeeData.remove(i);
+                break;
+            }
+        }
     }// GEN-LAST:event_deleteButtonActionPerformed
 
     private void backButtonActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_backButtonActionPerformed

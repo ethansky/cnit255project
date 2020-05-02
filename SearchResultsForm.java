@@ -13,8 +13,26 @@ public class SearchResultsForm extends javax.swing.JFrame {
     /**
      * Creates new form SearchResultsForm
      */
-    public SearchResultsForm() {
+    public SearchResultsForm(Employee emp) {
         initComponents();
+        jTextField1.setText(emp.getFirstName());
+        jTextField2.setText(emp.getLastName());
+        jTextField3.setText(Integer.toString(emp.getEmployeeUID()));
+        if (emp instanceof HR){
+            jTextField4.setText(Double.toString(((HR)emp).getSalary()));
+        }
+        else if (emp instanceof Manager)
+        {
+            jTextField4.setText(Double.toString(((Manager)emp).getSalary()));
+        }
+        else if (emp instanceof Sales)
+        {
+            jTextField4.setText(Double.toString(((Sales)emp).getSalary()));
+        }
+        else 
+        jTextField4.setText("Not Salaried"); 
+        
+        jTextField5.setText(emp.getAddress());
     }
 
     /**
@@ -41,7 +59,7 @@ public class SearchResultsForm extends javax.swing.JFrame {
 
         jLabel7.setText("jLabel7");
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
         jLabel1.setText("Search Results");
@@ -149,7 +167,7 @@ public class SearchResultsForm extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new SearchResultsForm().setVisible(true);
+                // new SearchResultsForm().setVisible(true);
             }
         });
     }
