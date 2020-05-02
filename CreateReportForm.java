@@ -115,7 +115,7 @@ public class CreateReportForm extends javax.swing.JFrame {
 
     private void backButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonActionPerformed
         this.setVisible(false);
-        MenuForm frame = new MenuForm();
+        MenuForm frame = new MenuForm(employeeData);
         frame.setVisible(true);
     }//GEN-LAST:event_backButtonActionPerformed
 

@@ -29,7 +29,7 @@ public class PopupForm extends javax.swing.JFrame {
 
         popupTextbox = new javax.swing.JTextField();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         popupTextbox.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         popupTextbox.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -83,11 +83,11 @@ public class PopupForm extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new PopupForm().setVisible(true);
-            }
-        });
+//        java.awt.EventQueue.invokeLater(new Runnable() {
+//            public void run() {
+//                new PopupForm().setVisible(true);
+//            }
+//        });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

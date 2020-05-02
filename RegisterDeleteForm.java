@@ -9,6 +9,7 @@
  * @author Cole Hutchcraft
  */
 
+import javax.swing.*;
 import java.util.ArrayList;
 
 public class RegisterDeleteForm extends javax.swing.JFrame {
@@ -261,20 +262,23 @@ public class RegisterDeleteForm extends javax.swing.JFrame {
         String firstName = firstNameTextbox.getText(); 
         String lastName = lastNameTextbox.getText();
         String phoneNumber = phoneNumbTextbox.getText();
-        int employeeUID = Integer.valueOf(uIDTextbox.getText());
+        int employeeUID = Integer.parseInt(uIDTextbox.getText());
         String address = addressTextbox.getText();
         String password = passwordTextbox.getText();
+        System.out.println("employeeData.size() = " + employeeData.size());
         employeeData.add(new Employee(firstName, lastName, phoneNumber, employeeUID, address, password));
+        System.out.println("employeeData.size() = " + employeeData.size());
         
         PopupForm popup = new PopupForm("Employee Registered");
         popup.setVisible(true);
     }// GEN-LAST:event_registerButtonActionPerformed
 
     private void deleteButtonActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_deleteButtonActionPerformed
+        System.out.println("test");
+        String firstName = firstNameDelTextbox.getText();
+        String lastName = lastNameDelTextbox.getText();
+        int employeeUID = Integer.parseInt(uIDDelTextbox.getText());
         for (int i = 0; i < employeeData.size(); i++){
-            String firstName = firstNameDelTextbox.getText();
-            String lastName = lastNameDelTextbox.getText();
-            int employeeUID = Integer.valueOf(uIDDelTextbox.getText());
             if (firstName.equals(employeeData.get(i).getFirstName()) && lastName.equals(employeeData.get(i).getLastName()) && (employeeUID == employeeData.get(i).getEmployeeUID())){
                 employeeData.remove(i);
                 PopupForm popup = new PopupForm("Deleted Employee");
@@ -285,7 +289,7 @@ public class RegisterDeleteForm extends javax.swing.JFrame {
 
     private void backButtonActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_backButtonActionPerformed
         this.setVisible(false);
-        MenuForm frame = new MenuForm();
+        MenuForm frame = new MenuForm(employeeData);
         frame.setVisible(true);
     }// GEN-LAST:event_backButtonActionPerformed
 

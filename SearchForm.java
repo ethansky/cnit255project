@@ -125,7 +125,7 @@ public class SearchForm extends javax.swing.JFrame {
     private void searchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchButtonActionPerformed
         String firstName = firstNameSearchTextbox.getText();
         String lastName = lastNameSearchTextbox.getText();
-        int employeeUID = Integer.valueOf(uIDSearchTextbox.getText());
+        int employeeUID = Integer.parseInt(uIDSearchTextbox.getText());
         int i = 0;
         for (Employee employee : employeeData) {
             if (firstName.equals(employee.getFirstName()) && lastName.equals(employee.getLastName()) && (employeeUID == employee.getEmployeeUID())){
@@ -148,7 +148,7 @@ public class SearchForm extends javax.swing.JFrame {
 
     private void backButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonActionPerformed
         this.setVisible(false);
-        MenuForm frame = new MenuForm();
+        MenuForm frame = new MenuForm(employeeData);
         frame.setVisible(true);
     }//GEN-LAST:event_backButtonActionPerformed
 
