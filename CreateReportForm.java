@@ -9,6 +9,11 @@
  * @author Cole Hutchcraft
  */
 import java.util.ArrayList;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
 public class CreateReportForm extends javax.swing.JFrame {
     private ArrayList<Employee> employeeData;
@@ -105,13 +110,34 @@ public class CreateReportForm extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void submitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_submitButtonActionPerformed
+        /*
+        formTextbox = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
+        submitButton = new javax.swing.JButton();
+        clearButton = new javax.swing.JButton();
+        */
 
-    private void clearButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_clearButtonActionPerformed
+
+    private void submitButtonActionPerformed(java.awt.event.ActionEvent evt){
+        String writtenText = formTextbox.getText();
+        try{
+
+        Files.createDirectories(Paths.get("c:/reports"));
+
+        BufferedWriter writer = new BufferedWriter(new FileWriter("c:/reports/report.txt"));
+	    writer.write(writtenText);
+        writer.close();
+        }
+        catch (IOException ex){
+            System.out.println (ex.toString());
+        System.out.println("Could not make report");
+        }
+    }
+    
+
+    private void clearButtonActionPerformed(java.awt.event.ActionEvent evt) {
+        formTextbox.setText("");
+    }
 
     private void backButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonActionPerformed
         this.setVisible(false);
