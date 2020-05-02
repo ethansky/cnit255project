@@ -17,7 +17,7 @@ public class Credentials {
 
     private String[][] loginDatabase ={
         {"C001", "E002","J003","K004","J005"},
-        {"Chutchcraft","E","JKlezinsky","KLee","JPeterson"}
+        {"Chutchcraft","E","JKlezinsky","KLee","JPetersen"}
     };
     
     public static void main(String[] args) {
@@ -50,11 +50,18 @@ public class Credentials {
     public void deleteUser(String firstName, String lastName, int employeeUID){ 
         
         for (int i = 0; i < employeeData.size(); i++){
-            if (firstName.equals(true) && lastName.equals(true) && employeeUID = true){
-
+            if (firstName.equals(employeeData.get(i).getFirstName()) && lastName.equals(employeeData.get(i).getLastName()) && (employeeUID == employeeData.get(i).getEmployeeUID())){
+                employeeData.remove(i);
+                break;
             }
         }
     }
 
-    public Employee searchEmployee(String firstName, String lastName, int employeeUID)
+    public Employee searchEmployee(String firstName, String lastName, int employeeUID){
+        for (int i = 0; i < employeeData.size(); i++){
+            if (firstName.equals(employeeData.get(i).getFirstName()) && lastName.equals(employeeData.get(i).getLastName()) && (employeeUID == employeeData.get(i).getEmployeeUID())){
+                return (Employee) employeeData.get(i);
+            }
+        }
+    }
 }
