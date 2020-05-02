@@ -265,7 +265,9 @@ public class RegisterDeleteForm extends javax.swing.JFrame {
         String address = addressTextbox.getText();
         String password = passwordTextbox.getText();
         employeeData.add(new Employee(firstName, lastName, phoneNumber, employeeUID, address, password));
-
+        
+        PopupForm popup = new PopupForm("Employee Registered");
+        popup.setVisible(true);
     }// GEN-LAST:event_registerButtonActionPerformed
 
     private void deleteButtonActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_deleteButtonActionPerformed
@@ -275,7 +277,8 @@ public class RegisterDeleteForm extends javax.swing.JFrame {
             int employeeUID = Integer.valueOf(uIDDelTextbox.getText());
             if (firstName.equals(employeeData.get(i).getFirstName()) && lastName.equals(employeeData.get(i).getLastName()) && (employeeUID == employeeData.get(i).getEmployeeUID())){
                 employeeData.remove(i);
-                break;
+                PopupForm popup = new PopupForm("Deleted Employee");
+                popup.setVisible(true);
             }
         }
     }// GEN-LAST:event_deleteButtonActionPerformed
