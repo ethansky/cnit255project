@@ -8,13 +8,16 @@
  *
  * @author Cole Hutchcraft
  */
-public class CreateReportForm extends javax.swing.JFrame {
+import java.util.ArrayList;
 
+public class CreateReportForm extends javax.swing.JFrame {
+    private ArrayList<Employee> employeeData;
     /**
      * Creates new form CreateReportForm
      */
-    public CreateReportForm() {
+    public CreateReportForm(ArrayList<Employee> employeeData) {
         initComponents();
+        this.employeeData = employeeData;
     }
 
     /**

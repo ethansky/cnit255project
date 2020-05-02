@@ -8,13 +8,16 @@
  *
  * @author Cole Hutchcraft
  */
-public class SearchForm extends javax.swing.JFrame {
+import java.util.ArrayList;
 
+public class SearchForm extends javax.swing.JFrame {
+    private ArrayList<Employee> employeeData;
     /**
      * Creates new form SearchForm
      */
-    public SearchForm() {
+    public SearchForm(ArrayList<Employee> employeeData) {
         initComponents();
+        this.employeeData = employeeData;
     }
 
     /**

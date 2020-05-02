@@ -8,13 +8,26 @@
  *
  * @author Cole Hutchcraft
  */
-public class MenuForm extends javax.swing.JFrame {
+import java.util.ArrayList;
 
+public class MenuForm extends javax.swing.JFrame {
+    private ArrayList<Employee> employeeData;
     /**
      * Creates new form MenuForm
      */
     public MenuForm() {
         initComponents();
+        employeeData = new ArrayList<>();
+
+        employeeData.add(
+                new HR("Cole", "Hutchcraft", "8121233456", 001, "400 Northwestern Ave", "CHutchcraft", 34, 50000, 25));
+        employeeData.add(new Manager("Ethan", "Evans", "3456885998", 002, "1234 Easy Way", "EEvans", 5, 15000, 60000));
+        employeeData.add(new Sales("James", "Klezinsky", "9874732216", 003, "1564 Big Road Ln", "JKlezinsky", 4, 45000,
+                500, 45, 45000, "Marketing"));
+        employeeData.add(new Sales("Justin", "Petersen", "2437879008", 004, "600 Stadium Ave", "JPetersen", 5, 60000,
+                345, 30, 30000, "Hardware"));
+        employeeData.add(new Employee("Jerry", "Lee", "8674937464", 005, "1100 Grant St", "JLee"));
+        
     }
 
     /**
