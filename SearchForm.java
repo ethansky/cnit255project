@@ -123,7 +123,22 @@ public class SearchForm extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void searchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchButtonActionPerformed
-        // TODO add your handling code here:
+        String firstName = firstNameSearchTextbox.getText();
+        String lastName = lastNameSearchTextbox.getText();
+        int employeeUID = Integer.valueOf(uIDSearchTextbox.getText());
+        int i = 0;
+        for (Employee employee : employeeData) {
+            if (firstName.equals(employee.getFirstName()) && lastName.equals(employee.getLastName()) && (employeeUID == employee.getEmployeeUID())){
+                 
+                break;
+            }
+            i++;
+        }
+        if (i == employeeData.size() - 1){
+            i = -1; 
+        }
+
+        SearchResultsForm foobar = new SearchResultsForm();
     }//GEN-LAST:event_searchButtonActionPerformed
 
     private void backButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonActionPerformed

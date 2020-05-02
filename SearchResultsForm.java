@@ -46,9 +46,9 @@ public class SearchResultsForm extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
         jLabel1.setText("Search Results");
 
-        jLabel2.setText("Username:");
+        jLabel2.setText("First Name:");
 
-        jLabel3.setText("Password:");
+        jLabel3.setText("Last Name:");
 
         jLabel4.setText("uID:");
 
@@ -86,7 +86,7 @@ public class SearchResultsForm extends javax.swing.JFrame {
                             .addComponent(jTextField1)
                             .addComponent(jTextField2)
                             .addComponent(jTextField5))))
-                .addContainerGap(66, Short.MAX_VALUE))
+                .addContainerGap(63, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
